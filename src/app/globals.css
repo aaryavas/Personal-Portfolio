@@ -42,8 +42,16 @@ body {
   50% { border-color: transparent;}
 }
 
-/*cursor blinking*/
-@keyframes  typing {
-  from  { width: 0 }
+
+.typed-cursor {
+  animation: blink 0.7s infinite;
 }
 
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0; }
+}
+
+.hide-cursor .typed-cursor {
+  opacity: 0;
+}
