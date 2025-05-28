@@ -2,6 +2,8 @@
 import Image from "next/image";
 import { ReactTyped } from "react-typed";
 import { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import "./globals.css"
 export default function Home() {
 
