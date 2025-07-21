@@ -1,17 +1,18 @@
-//the code for the resume window will go here
-// pages/ResumeWindow.jsx (Pages Router)
-export default function Resume() {
-  return (
-    <div>
-      Build Component Here
-    <embed
-      src = '/resume.pdf'
-      width = '1000vh'
-      height = '1150vh'      
-    />
-    </div>
+'use client'
+
+import dynamic  from 'next/dynamic';
+import Resume from './resume';
+
+// this is flagging an error because the file we are accessing is empty
+const resume = dynamic(() => import('./resume'), { ssr: false }); 
+
+export default function ResumeViewer() {
+    return (
+        <div>
+            <Resume/>            
+        </div>
+
+    )
 
 
-
-  );
 }
